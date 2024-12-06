@@ -1,0 +1,86 @@
+.game {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 150px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 8px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  background-color: #78bec5;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.cell:hover {
+  background-color: #5c94b0;
+}
+
+.xCell,
+.oCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.xCell {
+  color: #fff;
+  background-color: #dc685a;
+}
+
+.oCell {
+  color: #fff;
+  background-color: #ecaf4f;
+}
+
+.icon {
+  font-size: 50px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease;
+}
+
+.icon.animate {
+  transform: scale(1.2);
+  opacity: 0.7;
+}
+
+.cell:hover .icon.xCell {
+  color: #ff6347; /* New color for X on hover */
+}
+
+.cell:hover .icon.oCell {
+  color: #87cefa; /* New color for O on hover */
+}
+
+.cell:hover .icon {
+  transform: scale(1.2); /* Make the icon bigger on hover */
+}
+
+.reset {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #454b5e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.reset:hover {
+  background-color: #262934;
+}
